@@ -6,7 +6,7 @@ var userName = readlineSync.question("What is your name? ");
 console.log(chalk.yellow("\nWelcome " + userName.toUpperCase() + " to DO YOU KNOW ME?\n"));
 console.log(chalk.white("Answer 5 questions and let's see if you know me well or not!!!\nYou get +1 for correct and 0 for incorrect answer.\nLets begin!!!!\n"));
 
-var highScore = [
+var userScores = [
   {
     name: 'Niharika',
     score: 3
@@ -71,12 +71,12 @@ console.log("-----------------------------------")
 console.log(chalk.red("\nYour Final Score is:", score + "/5"));
 console.log("\n-----------------------------------\n")
 
-var currentHighScore = highScore[0].score;
-var currentHighScoreUser = highScore[0].name;
-for (var i = 0; i < highScore.length; i++) {
-  if (currentHighScore < highScore[i].score) {
-    currentHighScore = highScore[i].score
-    currentHighScoreUser = highScore[i].name
+var currentHighScore = userScores[0].score;
+var currentHighScoreUser = userScores[0].name;
+for (var i = 0; i < userScores.length; i++) {
+  if (currentHighScore < userScores[i].score) {
+    currentHighScore = userScores[i].score
+    currentHighScoreUser = userScores[i].name
   }
 }
 
